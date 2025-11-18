@@ -26,7 +26,7 @@ A very good usage of this could be- when we want to take an object and a key as 
         bike: string;
         plane: string;
     }
-    type MyToy = keyof toys; // car|bike|plane
+    type MyToy = keyof Toys; // "car" | "bike" | "plane"
 
     function getToy(obj: Toys, key: MyToy){
         return obj[key];
@@ -38,7 +38,7 @@ A very good usage of this could be- when we want to take an object and a key as 
         plane: "a"
     }
 
-    const myToy: string = "bike";
+    const myToy: MyToy = "bike";
 
     console.log(getToy(toys,myToy))
 
